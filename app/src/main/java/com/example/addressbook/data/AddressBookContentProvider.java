@@ -97,7 +97,6 @@ public class AddressBookContentProvider extends ContentProvider {
             default:
                 throw new UnsupportedOperationException(getContext().getString(R.string.invalid_insert_uri) + uri);
         }
-
         return newContactUri;
     }
 
@@ -119,12 +118,10 @@ public class AddressBookContentProvider extends ContentProvider {
             default:
                 throw new UnsupportedOperationException(getContext().getString(R.string.invalid_update_uri) + uri);
         }
-
         // if changes were made, notify observers that the database changed
         if (numberOfRowsUpdated != 0) {
             getContext().getContentResolver().notifyChange(uri, null);
         }
-
         return numberOfRowsUpdated;
     }
 
@@ -149,7 +146,6 @@ public class AddressBookContentProvider extends ContentProvider {
         if (numberOfRowsDeleted != 0) {
             getContext().getContentResolver().notifyChange(uri, null);
         }
-
         return numberOfRowsDeleted;
     }
 }

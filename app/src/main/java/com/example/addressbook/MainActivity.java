@@ -9,11 +9,11 @@ import android.support.v7.widget.Toolbar;
 public class MainActivity extends AppCompatActivity implements ContactsFragment.ContactsFragmentListener, DetailFragment.DetailFragmentListener, AddEditFragment.AddEditFragmentListener {
 
     public static final String CONTACT_URI = "contact_uri";
-
     private ContactsFragment contactsFragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.contacts_activity);
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -39,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements ContactsFragment.
         }
     }
 
-
     @Override
     public void onAddContact() {
         if (findViewById(R.id.fragmentContainer) != null) {
@@ -50,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements ContactsFragment.
     }
 
     private void displayContact(Uri contactUri, int viewID) {
+
         DetailFragment detailFragment = new DetailFragment();
 
         // specify contact's Uri as an argument to the DetailFragment
@@ -65,6 +65,7 @@ public class MainActivity extends AppCompatActivity implements ContactsFragment.
     }
 
     private void displayAddEditFragment(int viewID, Uri contactUri) {
+
         AddEditFragment addEditFragment = new AddEditFragment();
 
         // if editing existing contact, provide contactUri as an argument
@@ -98,6 +99,7 @@ public class MainActivity extends AppCompatActivity implements ContactsFragment.
 
     @Override
     public void onAddEditCompleted(Uri contactUri) {
+
         getSupportFragmentManager().popBackStack();
         contactsFragment.updateContactList();
 

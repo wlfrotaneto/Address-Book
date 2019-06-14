@@ -46,7 +46,6 @@ public class AddEditFragment extends Fragment implements LoaderManager.LoaderCal
     private TextInputLayout stateTextInputLayout;
     private TextInputLayout zipTextInputLayout;
     private FloatingActionButton saveContactFAB;
-
     private CoordinatorLayout coordinatorLayout; // used with SnackBars
 
     // set AddEditFragmentListener when Fragment attached
@@ -106,17 +105,13 @@ public class AddEditFragment extends Fragment implements LoaderManager.LoaderCal
     // to hide or show saveButtonFAB
     private final TextWatcher nameChangedListener = new TextWatcher() {
         @Override
-        public void beforeTextChanged(CharSequence s, int start, int count,
-                                      int after) {
+        public void beforeTextChanged(CharSequence s, int start, int count, int after) {
         }
-
         // called when the text in nameTextInputLayout changes
         @Override
-        public void onTextChanged(CharSequence s, int start, int before,
-                                  int count) {
+        public void onTextChanged(CharSequence s, int start, int before, int count) {
             updateSaveButtonFAB();
         }
-
         @Override
         public void afterTextChanged(Editable s) {
         }
@@ -158,7 +153,6 @@ public class AddEditFragment extends Fragment implements LoaderManager.LoaderCal
 
         if (addingNewContact) {
             Uri newContactUri = getActivity().getContentResolver().insert(Contact.CONTENT_URI, contentValues);
-
             if (newContactUri != null) {
                 Snackbar.make(coordinatorLayout, R.string.contact_added, Snackbar.LENGTH_LONG).show();
                 listener.onAddEditCompleted(newContactUri);
