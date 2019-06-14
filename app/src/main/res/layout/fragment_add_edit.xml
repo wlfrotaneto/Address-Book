@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+>
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/scrollView2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginLeft="8dp"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0">
+
+            <android.support.design.widget.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/label_name"
+                    android:hint="@string/hint_name_required"
+                    android:id="@+id/nameTextInputLayout">
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/label_name"
+                    android:hint="@string/label_name"
+                    android:id="@+id/nameTextInputLayoutEdit"/>
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/phoneTextInputLayoutEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/label_phone"
+                    android:hint="@string/hint_phone"/>
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/emailTextInputLayoutEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/hint_email"
+                    android:hint="@string/hint_email"/>
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/streetTextInputLayoutEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/label_street"
+                    android:hint="@string/hint_street"/>
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/cityTextInputLayoutEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/label_city"
+                    android:hint="@string/hint_city"/>
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/stateTextInputLayoutEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/label_state"
+                    android:hint="@string/hint_state"/>
+
+            <android.support.design.widget.TextInputEditText
+                    android:id="@+id/zipTextInputLayoutEdit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeActionLabel="@string/label_zip"
+                    android:hint="@string/hint_zip"/>
+        </LinearLayout>
+    </ScrollView>
+
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/saveFloatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@drawable/ic_save_black_24dp" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintVertical_bias="1.0"
+            app:layout_constraintHorizontal_bias="0.46" android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"/>
+</android.support.constraint.ConstraintLayout>
